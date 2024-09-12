@@ -1,7 +1,21 @@
 import { useState } from "react";
 import ReactApexChart from "react-apexcharts";
 import  Title from '../../Ui/Title'
-import Revenue from "../Revenue/Revenue";
+import { motion } from "framer-motion";
+
+const chartVariants ={
+  hidden:{opacity:0, scale:0.8},
+  visible:{
+    opacity:1,
+    scale:1,
+    transition:{
+      duration:0.8,
+      ease:"easeOut",
+    }
+  }
+}
+
+
 const ApexChart = () => {
     const [series] = useState([
           {
@@ -47,14 +61,18 @@ const ApexChart = () => {
         return <div className="flex-1 ">
             <Title>Revenue</Title>
 
-            <div className="flex-1 bg-gray-50 rounded-lg">
-                <div>
-                  <ReactApexChart options={options}
+            <div className="flex-1 bg-gray-50 p-3 rounded-lg">
+                <motion.div id="chart" className="mb-4" initial='hidden'
+                animate='visible' variants={chartVariants}>
+                  <ReactApexChart 
+                  options={options}
                    series={series}
                    type="area"
                    height={350} />
-                </div>
-                <div id="html-dist"><Revenue/></div>
+                </motion.div>
+                <div id="html-dist">
+                  
+                  </div>
             </div>
         </div>
     }

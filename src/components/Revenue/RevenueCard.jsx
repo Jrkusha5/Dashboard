@@ -1,4 +1,5 @@
-import React from "react"
+
+
 const RevenueCard = ({card}) => {
   return (
     <div className={`${card.bgColor} p-2 flex gap-3 rounded-xl

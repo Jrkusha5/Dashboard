@@ -1,8 +1,30 @@
 import { PiDotsThreeOutlineLight } from "react-icons/pi"
 import Title from "../../Ui/Title"
+import { motion } from "framer-motion"
 import { categories } from "../../constants"
 import CategoryItem from "./CategoryItem"
 
+const containerVariants ={
+   hidden: { opacity:0 },
+   show:{
+    opacity:1,
+    transition:{
+      staggerChildren:0.1,
+    }
+   }
+}
+
+const itemVariants ={
+  hidden: {opacity : 0, y:20},
+  show:{ opacity:1,
+    y:0,
+    transition:{
+      duration:0.6,
+      case:"caseOut"
+    }
+
+  }
+}
 
 const Categories = () => {
   return (
@@ -12,15 +34,16 @@ const Categories = () => {
           <PiDotsThreeOutlineLight className="cursor-pointer hover:text-gray6500" />
     </div>
 
-    <div className="flex gap-3">
+    <motion.div className="flex gap-3" variants={containerVariants}
+      initial="hidden" animate="show">
         {
             categories.map((category, index)=>(
-                <div key={index}>
+                <motion.div key={index} variants={itemVariants}>
                     <CategoryItem name={category.name} icon={category.icon}/>
-                </div>
+                </motion.div>
             ))
         }
-    </div>
+    </motion.div>
     </div>
   )
 }
