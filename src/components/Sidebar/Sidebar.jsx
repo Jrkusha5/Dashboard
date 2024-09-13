@@ -4,8 +4,6 @@ import {menuList} from '../../constants'
 import { FaTimes , FaBars} from 'react-icons/fa'
 
 
-
-
 const Sidebar = ({togglesidebar, isOpen}) => {
   return (
   <div className={`bg-gray-800 text-white p-5 fixed top-0 left-0 h-full
@@ -13,13 +11,13 @@ const Sidebar = ({togglesidebar, isOpen}) => {
   <div className={`${isOpen ? "" : "flex flex-col items-center justify-center"} duration-300`}>
           {/*  logo */}
       <div className='flex items-center justify-center gap-4'>
-      <GiFireDash  className='text-3xl cursor-pointer hover:text-gray-400' />
+      <GiFireDash  className='text-2xl cursor-pointer hover:text-gray-400' />
       <span className={`text-2xl ${isOpen ? "" : "hidden"} duration-300`}>DashBoard</span>
       </div>
 
       {/*  menu list */}
       <nav className='mt-20'>
-        <ul className='flex flex-col gap-6'>
+        <ul className='text-xl flex flex-col gap-6'>
           
             {menuList.map((item, index)=>(
                 <li key={index} className='flex items-center gap-3 cursor-pointer
