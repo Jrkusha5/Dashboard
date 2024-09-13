@@ -10,11 +10,11 @@ const App = () => {
   }
   
   return (
-    <div className='flex h-screen font-Suse'>
+    <div className='flex h-screen font-Suse '>
       <Sidebar isOpen={isOpen} togglesidebar={togglesidebar} />
       <div className={`flex-1 transition-all duration-300 ${
         isOpen ? 'ml-52': 'ml-20'}`}>
-        <Main/>
+        <Main />
       </div>
     </div>
   )

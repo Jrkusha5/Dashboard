@@ -4,7 +4,7 @@ import  Title from '../../Ui/Title'
 import { motion } from "framer-motion";
 
 const chartVariants ={
-  hidden:{opacity:0, scale:0.8},
+  hidden:{opacity:0, scale:0.6},
   visible:{
     opacity:1,
     scale:1,
@@ -70,7 +70,7 @@ const ApexChart = () => {
                    type="area"
                    height={350} />
                 </motion.div>
-                <div id="html-dist">
+                <div id="html-dist" >
                   
                   </div>
             </div>

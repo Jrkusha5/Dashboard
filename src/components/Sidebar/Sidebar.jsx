@@ -14,7 +14,7 @@ const Sidebar = ({togglesidebar, isOpen}) => {
           {/*  logo */}
       <div className='flex items-center justify-center gap-4'>
       <GiFireDash  className='text-3xl cursor-pointer hover:text-gray-400' />
-      <span className={`text-2xl ${isOpen ? "" : "hidden"} duration-300`}>SalesVista</span>
+      <span className={`text-2xl ${isOpen ? "" : "hidden"} duration-300`}>DashBoard</span>
       </div>
 
       {/*  menu list */}
