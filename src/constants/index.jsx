@@ -32,14 +32,11 @@ export const menuList = [
 ];
 
 export const categories = [
-  { name: "Drink", icon: drink },
+  { name: "TechStack", icon: drink },
   { name: "Fruits", icon: fruits },
   { name: "Travel", icon: travel },
   { name: "Music", icon: music },
-  { name: "Joystick", icon: joystick },
-  { name: "Laptop", icon: laptop },
-  { name: "Mobile", icon: mobile },
-  { name: "Food", icon: food },
+  
  
 ];
 
