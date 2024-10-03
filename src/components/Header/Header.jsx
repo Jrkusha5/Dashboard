@@ -6,8 +6,8 @@ const Header = () => {
       border-gray-200">
       <h1 className="font-bold text-blue-700 text-xl uppercase flex
         items-center gap-3">
-        Welcome Back , {""} <span className="font-bold text-blue-500">
-           Tes Manker 
+        Welcome Back  {""} <span className="font-bold text-blue-500">
+           
           </span></h1>
 
       <div className="flex gap-2 ">

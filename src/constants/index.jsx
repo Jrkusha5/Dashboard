@@ -32,10 +32,10 @@ export const menuList = [
 ];
 
 export const categories = [
-  { name: "TechStack", icon: drink },
-  { name: "Fruits", icon: fruits },
-  { name: "Travel", icon: travel },
-  { name: "Music", icon: music },
+  { name: "open", icon: drin },
+  { name: "delivered", icon: fruit },
+  { name: "pending", icon: trave },
+  { name: "closed", icon: musi },
   
  
 ];

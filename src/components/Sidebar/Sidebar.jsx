@@ -6,7 +6,7 @@ import { FaTimes , FaBars} from 'react-icons/fa'
 
 const Sidebar = ({togglesidebar, isOpen}) => {
   return (
-  <div className={`bg-gray-800 text-white p-5 fixed top-0 left-0 h-full
+  <div className={`bg-gray-900 text-white p-5 fixed top-0 left-0 h-full
    flex flex-col justify-between ${isOpen ? "w-52" : "w-20"} duration-300`}>
   <div className={`${isOpen ? "" : "flex flex-col items-center justify-center"} duration-300`}>
           {/*  logo */}
